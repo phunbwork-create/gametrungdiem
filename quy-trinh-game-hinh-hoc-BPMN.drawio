@@ -1,0 +1,523 @@
+<mxfile host="app.diagrams.net" modified="2026-11-07T00:00:00.000Z" agent="Claude Code" version="24.7.17" type="device">
+
+  <!-- ==================================================================== -->
+  <!-- TRANG 1 - QUY TRÌNH TỔNG THỂ (BPMN Collaboration Diagram)            -->
+  <!-- ==================================================================== -->
+  <diagram id="pg1" name="1. Quy trình tổng thể">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2550" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="p1-title" value="QUY TRÌNH ÔN LUYỆN TOÁN HÌNH LỚP 3 - GAME VƯƠNG QUỐC HÌNH HỌC" style="text;html=1;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#2F3E52;" vertex="1" parent="1">
+          <mxGeometry x="40" y="-10" width="1200" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Pool black-box: Phụ huynh -->
+        <mxCell id="p1-poolPH" value="Phụ huynh / Gia sư" style="swimlane;html=1;horizontal=0;startSize=30;fillColor=#F5F5F5;strokeColor=#6C7A89;fontSize=14;fontStyle=1;fontColor=#2F3E52;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="2400" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Pool chính -->
+        <mxCell id="p1-pool" value="Hệ thống Game Vương Quốc Hình Học" style="swimlane;html=1;horizontal=0;startSize=30;fillColor=none;strokeColor=#2F3E52;fontSize=14;fontStyle=1;fontColor=#2F3E52;" vertex="1" parent="1">
+          <mxGeometry x="40" y="140" width="2400" height="840" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p1-lane1" value="Học sinh (Bé)" style="swimlane;html=1;horizontal=0;startSize=30;fillColor=none;strokeColor=#8497B0;fontSize=12;fontStyle=1;fontColor=#44546A;" vertex="1" parent="p1-pool">
+          <mxGeometry x="30" y="0" width="2370" height="240" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1-lane2" value="Giao diện Game (UI)" style="swimlane;html=1;horizontal=0;startSize=30;fillColor=none;strokeColor=#8497B0;fontSize=12;fontStyle=1;fontColor=#44546A;" vertex="1" parent="p1-pool">
+          <mxGeometry x="30" y="240" width="2370" height="240" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1-lane3" value="Bộ máy Game (Engine)" style="swimlane;html=1;horizontal=0;startSize=30;fillColor=none;strokeColor=#8497B0;fontSize=12;fontStyle=1;fontColor=#44546A;" vertex="1" parent="p1-pool">
+          <mxGeometry x="30" y="480" width="2370" height="240" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1-lane4" value="Lưu trữ tiến độ" style="swimlane;html=1;horizontal=0;startSize=30;fillColor=none;strokeColor=#8497B0;fontSize=12;fontStyle=1;fontColor=#44546A;" vertex="1" parent="p1-pool">
+          <mxGeometry x="30" y="720" width="2370" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== Lane 1: Học sinh ===== -->
+        <mxCell id="p1-start" value="Bé mở game" style="shape=mxgraph.bpmn.shape;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;outline=standard;symbol=message;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=11;" vertex="1" parent="p1-lane1">
+          <mxGeometry x="70" y="100" width="40" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p1-t3" value="Chọn thử thách" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=12;" vertex="1" parent="p1-lane1">
+          <mxGeometry x="560" y="90" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p1-note3" value="7 thử thách: Trung điểm · Hình tròn · Góc và ê-ke · Hình và khối · Chu vi · Diện tích · Tổng hợp" style="shape=mxgraph.flowchart.annotation_1;html=1;align=left;whiteSpace=wrap;verticalAlign=middle;spacingLeft=10;fontSize=11;fontColor=#555555;strokeColor=#9E9E9E;" vertex="1" parent="p1-lane1">
+          <mxGeometry x="560" y="160" width="200" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p1-g2" value="Bé muốn làm gì tiếp?" style="shape=mxgraph.bpmn.shape;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;background=gateway;outline=none;symbol=exclusiveGw;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=11;" vertex="1" parent="p1-lane1">
+          <mxGeometry x="2010" y="95" width="50" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p1-end" value="Kết thúc buổi ôn tập" style="shape=mxgraph.bpmn.shape;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;outline=end;symbol=general;fillColor=#F8CECC;strokeColor=#B85450;fontSize=11;" vertex="1" parent="p1-lane1">
+          <mxGeometry x="2140" y="100" width="40" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== Lane 2: UI ===== -->
+        <mxCell id="p1-t2" value="Hiển thị trang chủ:&lt;br&gt;7 thử thách và số sao đã đạt" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=12;" vertex="1" parent="p1-lane2">
+          <mxGeometry x="350" y="90" width="170" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p1-t7" value="Hiện màn hình kết quả:&lt;br&gt;điểm, số sao, lời động viên" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=12;" vertex="1" parent="p1-lane2">
+          <mxGeometry x="1800" y="85" width="170" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== Lane 3: Engine ===== -->
+        <mxCell id="p1-t1" value="Tải tiến độ đã lưu" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=12;" vertex="1" parent="p1-lane3">
+          <mxGeometry x="160" y="90" width="150" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p1-t4" value="Sinh 8 câu hỏi ngẫu nhiên theo chủ đề đã chọn" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=12;" vertex="1" parent="p1-lane3">
+          <mxGeometry x="750" y="85" width="160" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p1-note1" value="Đề bài sinh ngẫu nhiên mỗi lượt nên bé không học thuộc được đáp án" style="shape=mxgraph.flowchart.annotation_1;html=1;align=left;whiteSpace=wrap;verticalAlign=middle;spacingLeft=10;fontSize=11;fontColor=#555555;strokeColor=#9E9E9E;" vertex="1" parent="p1-lane3">
+          <mxGeometry x="750" y="170" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p1-sp" value="Trả lời 8 câu hỏi&lt;br&gt;&lt;i&gt;(xem Trang 2)&lt;/i&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=12;strokeWidth=2;verticalAlign=top;spacingTop=8;" vertex="1" parent="p1-lane3">
+          <mxGeometry x="950" y="80" width="190" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1-sp-mk" value="+   ↻" style="rounded=0;html=1;fillColor=none;strokeColor=#9673A6;fontSize=11;fontColor=#9673A6;" vertex="1" parent="p1-sp">
+          <mxGeometry x="72" y="56" width="46" height="18" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p1-t5" value="Tính tổng điểm và xếp hạng sao" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=12;" vertex="1" parent="p1-lane3">
+          <mxGeometry x="1190" y="85" width="160" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p1-note2" value="Xếp sao: từ 90% điểm trở lên = 3 sao; từ 70% = 2 sao; từ 50% = 1 sao" style="shape=mxgraph.flowchart.annotation_1;html=1;align=left;whiteSpace=wrap;verticalAlign=middle;spacingLeft=10;fontSize=11;fontColor=#555555;strokeColor=#9E9E9E;" vertex="1" parent="p1-lane3">
+          <mxGeometry x="1150" y="170" width="250" height="62" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p1-g1" value="Sao mới cao hơn kỷ lục cũ?" style="shape=mxgraph.bpmn.shape;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;background=gateway;outline=none;symbol=exclusiveGw;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=11;" vertex="1" parent="p1-lane3">
+          <mxGeometry x="1400" y="95" width="50" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p1-t6" value="Cập nhật kỷ lục sao" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=12;" vertex="1" parent="p1-lane3">
+          <mxGeometry x="1500" y="90" width="150" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p1-g3" value="" style="shape=mxgraph.bpmn.shape;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;background=gateway;outline=none;symbol=exclusiveGw;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=11;" vertex="1" parent="p1-lane3">
+          <mxGeometry x="1700" y="95" width="50" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== Lane 4: Data store ===== -->
+        <mxCell id="p1-ds1" value="localStorage&lt;br&gt;Sao cao nhất mỗi thử thách" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;fontSize=11;" vertex="1" parent="p1-lane4">
+          <mxGeometry x="160" y="25" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1-ds2" value="localStorage&lt;br&gt;Sao cao nhất mỗi thử thách" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;fontSize=11;" vertex="1" parent="p1-lane4">
+          <mxGeometry x="1500" y="25" width="160" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== Sequence flows ===== -->
+        <mxCell id="p1-f1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F3E52;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1-start" target="p1-t1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1-f2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F3E52;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1-t1" target="p1-t2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1-f3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F3E52;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1-t2" target="p1-t3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1-f4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F3E52;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1-t3" target="p1-t4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1-f5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F3E52;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1-t4" target="p1-sp">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1-f6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F3E52;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1-sp" target="p1-t5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1-f7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F3E52;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1-t5" target="p1-g1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1-f8" value="Có" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F3E52;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1-g1" target="p1-t6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1-f9" value="Không" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F3E52;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1-g1" target="p1-g3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1495" y="810"/>
+              <mxPoint x="1795" y="810"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p1-f10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F3E52;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1-t6" target="p1-g3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1-f11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F3E52;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1-g3" target="p1-t7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1-f12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F3E52;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1-t7" target="p1-g2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1-f13" value="Chơi lại thử thách này" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#1F7A4D;fontSize=11;fontColor=#1F7A4D;labelBackgroundColor=#ffffff;dashed=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1-g2" target="p1-t4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2105" y="170"/>
+              <mxPoint x="860" y="170"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p1-f14" value="Chọn thử thách khác" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#1F7A4D;fontSize=11;fontColor=#1F7A4D;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1-g2" target="p1-t2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2105" y="200"/>
+              <mxPoint x="505" y="200"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p1-f15" value="Dừng" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F3E52;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1-g2" target="p1-end">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== Message flows ===== -->
+        <mxCell id="p1-m1" value="Giao bài ôn tập" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;endArrow=open;endFill=0;startArrow=oval;startFill=0;strokeColor=#444444;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.05;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1-poolPH" target="p1-start">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1-m2" value="Khoe kết quả: điểm và sao" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;endArrow=open;endFill=0;startArrow=oval;startFill=0;strokeColor=#444444;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.798;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1-t7" target="p1-poolPH">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== Data associations ===== -->
+        <mxCell id="p1-d1" value="đọc" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#666666;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1-ds1" target="p1-t1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1-d2" value="ghi" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#666666;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1-t6" target="p1-ds2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== Associations tới text annotation ===== -->
+        <mxCell id="p1-a1" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#9E9E9E;" edge="1" parent="1" source="p1-note1" target="p1-t4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1-a2" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#9E9E9E;" edge="1" parent="1" source="p1-note2" target="p1-t5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1-a3" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#9E9E9E;" edge="1" parent="1" source="p1-note3" target="p1-t3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- ==================================================================== -->
+  <!-- TRANG 2 - CHI TIẾT SUB-PROCESS: TRẢ LỜI MỘT CÂU HỎI                  -->
+  <!-- ==================================================================== -->
+  <diagram id="pg2" name="2. Chi tiết - Trả lời 1 câu hỏi">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="p2-title" value="CHI TIẾT SUB-PROCESS: TRẢ LỜI MỘT CÂU HỎI (lặp lại 8 lần cho mỗi lượt chơi)" style="text;html=1;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#2F3E52;" vertex="1" parent="1">
+          <mxGeometry x="40" y="-10" width="1400" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p2-pool" value="Vòng lặp trả lời câu hỏi" style="swimlane;html=1;horizontal=0;startSize=30;fillColor=none;strokeColor=#2F3E52;fontSize=14;fontStyle=1;fontColor=#2F3E52;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="2000" height="700" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p2-laneA" value="Học sinh (Bé)" style="swimlane;html=1;horizontal=0;startSize=30;fillColor=none;strokeColor=#8497B0;fontSize=12;fontStyle=1;fontColor=#44546A;" vertex="1" parent="p2-pool">
+          <mxGeometry x="30" y="0" width="1970" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="p2-laneB" value="Giao diện Game (UI)" style="swimlane;html=1;horizontal=0;startSize=30;fillColor=none;strokeColor=#8497B0;fontSize=12;fontStyle=1;fontColor=#44546A;" vertex="1" parent="p2-pool">
+          <mxGeometry x="30" y="180" width="1970" height="240" as="geometry"/>
+        </mxCell>
+        <mxCell id="p2-laneC" value="Bộ máy Game (Engine)" style="swimlane;html=1;horizontal=0;startSize=30;fillColor=none;strokeColor=#8497B0;fontSize=12;fontStyle=1;fontColor=#44546A;" vertex="1" parent="p2-pool">
+          <mxGeometry x="30" y="420" width="1970" height="280" as="geometry"/>
+        </mxCell>
+
+        <!-- Lane A -->
+        <mxCell id="p2-answer" value="Bé trả lời" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=12;" vertex="1" parent="p2-laneA">
+          <mxGeometry x="620" y="60" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p2-noteRule" value="Sai lần 1: hiện gợi ý và cho làm lại. Sai lần 2: hiện lời giải rồi chuyển câu" style="shape=mxgraph.flowchart.annotation_1;html=1;align=left;whiteSpace=wrap;verticalAlign=middle;spacingLeft=10;fontSize=11;fontColor=#555555;strokeColor=#9E9E9E;" vertex="1" parent="p2-laneA">
+          <mxGeometry x="900" y="100" width="260" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Lane B -->
+        <mxCell id="p2-show" value="Hiển thị câu hỏi đúng dạng tương tác" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=12;" vertex="1" parent="p2-laneB">
+          <mxGeometry x="400" y="85" width="200" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p2-noteMode" value="4 dạng: chọn đáp án · bàn phím số · bấm chỉ trên hình · kéo thả điểm" style="shape=mxgraph.flowchart.annotation_1;html=1;align=left;whiteSpace=wrap;verticalAlign=middle;spacingLeft=10;fontSize=11;fontColor=#555555;strokeColor=#9E9E9E;" vertex="1" parent="p2-laneB">
+          <mxGeometry x="400" y="175" width="230" height="55" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p2-praise" value="Chúc mừng và hiện lời giải" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=12;" vertex="1" parent="p2-laneB">
+          <mxGeometry x="1420" y="20" width="180" height="65" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p2-noteSol" value="Mọi câu đều có lời giải, kể cả khi bé làm đúng" style="shape=mxgraph.flowchart.annotation_1;html=1;align=left;whiteSpace=wrap;verticalAlign=middle;spacingLeft=10;fontSize=11;fontColor=#555555;strokeColor=#9E9E9E;" vertex="1" parent="p2-laneB">
+          <mxGeometry x="1420" y="95" width="200" height="48" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p2-hint" value="Hiện GỢI Ý và cho bé làm lại" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=12;" vertex="1" parent="p2-laneB">
+          <mxGeometry x="1150" y="145" width="170" height="65" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p2-sol" value="Hiện lời giải chi tiết và đáp án đúng" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=12;" vertex="1" parent="p2-laneB">
+          <mxGeometry x="1520" y="145" width="185" height="65" as="geometry"/>
+        </mxCell>
+
+        <!-- Lane C -->
+        <mxCell id="p2-start" value="Bắt đầu một câu" style="shape=mxgraph.bpmn.shape;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;outline=standard;symbol=general;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=11;" vertex="1" parent="p2-laneC">
+          <mxGeometry x="70" y="110" width="40" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p2-build" value="Dựng câu hỏi: đề bài, hình vẽ, đáp án, gợi ý, lời giải" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=12;" vertex="1" parent="p2-laneC">
+          <mxGeometry x="160" y="95" width="190" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p2-grade" value="Chấm bài" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=12;" vertex="1" parent="p2-laneC">
+          <mxGeometry x="790" y="100" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p2-gok" value="Trả lời đúng?" style="shape=mxgraph.bpmn.shape;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;background=gateway;outline=none;symbol=exclusiveGw;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=11;" vertex="1" parent="p2-laneC">
+          <mxGeometry x="960" y="105" width="50" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p2-score" value="Cộng điểm: 10 nếu đúng ngay, 5 nếu đúng ở lần thử thứ 2" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=12;" vertex="1" parent="p2-laneC">
+          <mxGeometry x="1180" y="15" width="180" height="65" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p2-gre" value="Đã sai 2 lần chưa?" style="shape=mxgraph.bpmn.shape;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;background=gateway;outline=none;symbol=exclusiveGw;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=11;" vertex="1" parent="p2-laneC">
+          <mxGeometry x="1070" y="195" width="50" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p2-merge" value="" style="shape=mxgraph.bpmn.shape;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;background=gateway;outline=none;symbol=exclusiveGw;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=11;" vertex="1" parent="p2-laneC">
+          <mxGeometry x="1760" y="105" width="50" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p2-end" value="Sang câu tiếp theo" style="shape=mxgraph.bpmn.shape;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;outline=end;symbol=general;fillColor=#F8CECC;strokeColor=#B85450;fontSize=11;" vertex="1" parent="p2-laneC">
+          <mxGeometry x="1860" y="110" width="40" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Flows -->
+        <mxCell id="p2-e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F3E52;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p2-start" target="p2-build">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p2-e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F3E52;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p2-build" target="p2-show">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p2-e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F3E52;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p2-show" target="p2-answer">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p2-e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F3E52;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="p2-answer" target="p2-grade">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p2-e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F3E52;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p2-grade" target="p2-gok">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p2-e6" value="Đúng" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#1F7A4D;fontColor=#1F7A4D;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p2-gok" target="p2-score">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p2-e7" value="Sai" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#B85450;fontColor=#B85450;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p2-gok" target="p2-gre">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p2-e8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F3E52;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p2-score" target="p2-praise">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1460" y="507"/>
+              <mxPoint x="1460" y="272"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p2-e9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F3E52;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="p2-praise" target="p2-merge">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1855" y="272"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p2-e10" value="Chưa - cho làm lại" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#D79B00;fontColor=#9A6E00;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p2-gre" target="p2-hint">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1165" y="655"/>
+              <mxPoint x="1200" y="655"/>
+              <mxPoint x="1200" y="397"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p2-e11" value="Làm lại câu này" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#D79B00;fontColor=#9A6E00;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="p2-hint" target="p2-answer">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1305" y="80"/>
+              <mxPoint x="795" y="80"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p2-e12" value="Rồi - sai lần 2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#B85450;fontColor=#B85450;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="p2-gre" target="p2-sol">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1682" y="680"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p2-e13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F3E52;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p2-sol" target="p2-merge">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1805" y="397"/>
+              <mxPoint x="1805" y="590"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p2-e14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#2F3E52;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="p2-merge" target="p2-end">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Associations -->
+        <mxCell id="p2-a1" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#9E9E9E;" edge="1" parent="1" source="p2-noteMode" target="p2-show">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p2-a2" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#9E9E9E;" edge="1" parent="1" source="p2-noteRule" target="p2-gok">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p2-a3" style="edgeStyle=none;html=1;dashed=1;endArrow=none;strokeColor=#9E9E9E;" edge="1" parent="1" source="p2-noteSol" target="p2-praise">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- ==================================================================== -->
+  <!-- TRANG 3 - CHÚ THÍCH KÝ HIỆU VÀ QUY TẮC NGHIỆP VỤ                     -->
+  <!-- ==================================================================== -->
+  <diagram id="pg3" name="3. Chú thích và quy tắc">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="p3-title" value="CHÚ THÍCH KÝ HIỆU BPMN 2.0 VÀ QUY TẮC NGHIỆP VỤ" style="text;html=1;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#2F3E52;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="900" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Khung chú thích ký hiệu -->
+        <mxCell id="p3-box1" value="A. Ký hiệu đã dùng" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingLeft=14;spacingTop=10;fontSize=15;fontStyle=1;fillColor=none;strokeColor=#8497B0;fontColor=#2F3E52;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="680" height="700" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p3-s1" value="" style="shape=mxgraph.bpmn.shape;html=1;perimeter=ellipsePerimeter;outlineConnect=0;outline=standard;symbol=message;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="80" y="155" width="40" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="p3-l1" value="&lt;b&gt;Start Event&lt;/b&gt; - sự kiện bắt đầu quy trình (có hình phong bì = bắt đầu bằng một thông điệp nhận được)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="150" y="150" width="540" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p3-s2" value="" style="shape=mxgraph.bpmn.shape;html=1;perimeter=ellipsePerimeter;outlineConnect=0;outline=end;symbol=general;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="80" y="215" width="40" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="p3-l2" value="&lt;b&gt;End Event&lt;/b&gt; - sự kiện kết thúc (viền đậm)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="150" y="215" width="540" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p3-s3" value="Hoạt động" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="275" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="p3-l3" value="&lt;b&gt;Task&lt;/b&gt; - một công việc. Màu phân theo lane: vàng = bé làm, xanh dương = giao diện hiển thị, xanh lá = hệ thống xử lý" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="150" y="270" width="540" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p3-s4" value="Sub-process" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=11;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="335" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="p3-l4" value="&lt;b&gt;Sub-process có vòng lặp&lt;/b&gt; - dấu + nghĩa là gói gọn một quy trình con (mở ở Trang 2), dấu ↻ nghĩa là lặp lại nhiều lần" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="150" y="330" width="540" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p3-s5" value="" style="shape=mxgraph.bpmn.shape;html=1;perimeter=rhombusPerimeter;background=gateway;outline=none;symbol=exclusiveGw;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="1">
+          <mxGeometry x="75" y="395" width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="p3-l5" value="&lt;b&gt;Exclusive Gateway (XOR)&lt;/b&gt; - điểm rẽ nhánh: chỉ đi theo đúng MỘT nhánh thoả điều kiện. Cũng dùng để gộp các nhánh lại" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="150" y="390" width="540" height="55" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p3-s6" value="" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="65" y="460" width="70" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="p3-l6" value="&lt;b&gt;Data Store&lt;/b&gt; - nơi lưu dữ liệu lâu dài. Ở đây là localStorage của trình duyệt" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="150" y="460" width="540" height="45" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p3-s7a" value="" style="rounded=0;html=1;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="60" y="520" width="90" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="p3-s7b" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#2F3E52;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="65" y="540" as="sourcePoint"/>
+            <mxPoint x="140" y="540" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p3-l7" value="&lt;b&gt;Sequence Flow&lt;/b&gt; - trình tự thực hiện bên trong cùng một pool (nét liền, mũi tên đặc)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="150" y="518" width="540" height="45" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p3-s8" value="" style="endArrow=open;endFill=0;startArrow=oval;startFill=0;dashed=1;html=1;strokeColor=#444444;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="65" y="595" as="sourcePoint"/>
+            <mxPoint x="140" y="595" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p3-l8" value="&lt;b&gt;Message Flow&lt;/b&gt; - thông điệp trao đổi giữa hai pool khác nhau (nét đứt, đầu tròn rỗng)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="150" y="573" width="540" height="45" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p3-s9" value="Ghi chú" style="shape=mxgraph.flowchart.annotation_1;html=1;align=left;whiteSpace=wrap;verticalAlign=middle;spacingLeft=8;fontSize=11;fontColor=#555555;strokeColor=#9E9E9E;" vertex="1" parent="1">
+          <mxGeometry x="60" y="635" width="85" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="p3-l9" value="&lt;b&gt;Text Annotation&lt;/b&gt; - lời chú thích thêm, nối bằng nét đứt (Association), không ảnh hưởng tới luồng chạy" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="150" y="633" width="540" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p3-s10" value="Lane" style="swimlane;html=1;horizontal=0;startSize=22;fillColor=none;strokeColor=#8497B0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="700" width="90" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="p3-l10" value="&lt;b&gt;Pool / Lane&lt;/b&gt; - Pool là một bên tham gia; Lane là vai trò bên trong pool. Ở đây: Học sinh, Giao diện, Bộ máy Game, Lưu trữ" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="150" y="698" width="540" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- Khung quy tắc nghiệp vụ -->
+        <mxCell id="p3-box2" value="B. Quy tắc nghiệp vụ (Business Rules)" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingLeft=14;spacingTop=10;fontSize=15;fontStyle=1;fillColor=none;strokeColor=#8497B0;fontColor=#2F3E52;" vertex="1" parent="1">
+          <mxGeometry x="760" y="100" width="780" height="700" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p3-r1" value="&lt;b&gt;BR-01 Số câu mỗi lượt&lt;/b&gt;&lt;br&gt;Mỗi lượt chơi gồm đúng 8 câu hỏi, sinh ngẫu nhiên từ ngân hàng dạng bài của chủ đề đã chọn." style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fontSize=12;fillColor=#FFF9E6;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="790" y="150" width="720" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="p3-r2" value="&lt;b&gt;BR-02 Tính điểm&lt;/b&gt;&lt;br&gt;Đúng ngay lần đầu: +10 điểm. Đúng ở lần thử thứ hai: +5 điểm. Sai cả hai lần: 0 điểm. Tối đa 80 điểm một lượt." style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fontSize=12;fillColor=#FFF9E6;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="790" y="225" width="720" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="p3-r3" value="&lt;b&gt;BR-03 Chính sách làm lại (sư phạm)&lt;/b&gt;&lt;br&gt;Sai lần 1: hệ thống chỉ hiện GỢI Ý và cho bé làm lại, không hiện đáp án. Sai lần 2: hiện lời giải chi tiết rồi mới chuyển câu." style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fontSize=12;fillColor=#FFF9E6;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="790" y="300" width="720" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="p3-r4" value="&lt;b&gt;BR-04 Luôn giải thích&lt;/b&gt;&lt;br&gt;Mọi câu hỏi đều hiện lời giải, kể cả khi bé trả lời đúng, để củng cố cách làm thay vì chỉ báo đúng hay sai." style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fontSize=12;fillColor=#FFF9E6;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="790" y="381" width="720" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="p3-r5" value="&lt;b&gt;BR-05 Xếp hạng sao&lt;/b&gt;&lt;br&gt;Theo tỉ lệ điểm đạt được trên 80: từ 90% trở lên = 3 sao; từ 70% = 2 sao; từ 50% = 1 sao; dưới 50% = 0 sao." style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fontSize=12;fillColor=#FFF9E6;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="790" y="456" width="720" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="p3-r6" value="&lt;b&gt;BR-06 Ghi kỷ lục&lt;/b&gt;&lt;br&gt;Chỉ ghi đè số sao đã lưu khi số sao của lượt mới CAO HƠN kỷ lục cũ, để bé không bị mất thành tích khi chơi thử." style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fontSize=12;fillColor=#FFF9E6;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="790" y="531" width="720" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="p3-r7" value="&lt;b&gt;BR-07 Dữ liệu cá nhân&lt;/b&gt;&lt;br&gt;Tiến độ chỉ lưu trong localStorage của trình duyệt trên máy, không gửi ra ngoài, không cần tài khoản và không cần mạng." style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fontSize=12;fillColor=#FFF9E6;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="790" y="606" width="720" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="p3-r8" value="&lt;b&gt;BR-08 Phạm vi kiến thức&lt;/b&gt;&lt;br&gt;7 thử thách phủ 4 mảng của chương trình Toán hình lớp 3: điểm ở giữa và trung điểm; hình tròn; góc và hình phẳng, hình khối; chu vi và diện tích." style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fontSize=12;fillColor=#FFF9E6;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="790" y="681" width="720" height="68" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+</mxfile>
