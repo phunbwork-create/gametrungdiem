@@ -1,0 +1,13 @@
+# Tài liệu giảng dạy gốc của giáo viên — KHÔNG đẩy lên repo công khai
+# (chứa thông tin tác giả trong metadata và là tài sản của người soạn bài)
+*.ppt
+*.pptx
+*.doc
+*.docx
+*.pdf
+
+# Rác hệ thống
+Thumbs.db
+desktop.ini
+.DS_Store
+~$*
